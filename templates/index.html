@@ -1,0 +1,2603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="{% static 'assets/triangleLogo.png' %}" type="image/x-icon">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <title>Windbnb</title>
+</head>
+<body>
+  <!--navbar-->
+  <!--not done with static-->
+  <nav class="navbar bg-body-white">
+    <div class="container p-2">
+      <div class="col-4">
+        <a class="navbar-brand" href="#">
+          <img src="{% static 'assets/logo.png' %}" alt="Windbnb" height="30px">
+        </a>
+      </div>
+      <div class="col-4 shadow rounded-5">
+        <ul class="nav justify-content-center border border-secondary rounded-5">
+          <li class="nav-item border-end border-opacity-25">
+            <a class="nav-link active text-secondary" aria-current="page" href="#">Anywhere</a>
+          </li>
+          
+          <li class="nav-item border-end border-opacity-25">
+            <a class="nav-link text-secondary" href="#">Any week</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link text-secondary" href="#">Add guests</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-md-1"><img src="{% static 'assets/search-icon.jpg' %}" alt="" height="20px" width="20px"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-4">
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link active text-secondary" aria-current="page" href="#">Windbnb your home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link me-3" href="#"><img src="assets/globe-logo.png" alt="" height="20px" width="20px"></a>
+          </li>
+          <div class="nav-btn-right row align-items-end border border-secondary rounded-5">
+           <div class="col-6 p-0 m-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><img src="assets/menu-btn.png" alt="" height="20px" width="20px"></a>
+            </li>
+           </div>
+            <div class="col-6 p-0 m-0">
+              <li class="nav-item">
+                <a class="nav-link"><img src="assets/profile-picture.png" alt="" height="20px" width="20px"></a>
+              </li>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <hr class="boder-tertiary">
+<!--page-navigation-->
+<nav aria-label="--page-navigation--">
+  <div class="container-fluid row">
+    <div class="col-10">
+      <div class="row overflow-x-scroll">
+       <div class="pagination">
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/amazing-pools.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Amazing pools</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/national-parks.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">National parks</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/tiny-homes.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Tiny homes</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/top-of-the-world.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Top of the world</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/islands.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Islands</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/private-rooms.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Private rooms</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/amazing-views.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Amazing views</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/omg.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">OMG!</h6>
+        </div>
+        <div class="column  m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/beachfronts.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Beachfronts</h6>
+        </div>
+        <div class="column  m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/designs.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Design</h6>
+        </div>
+        <div class="column  m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/bed&breakfast.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Bed & breakfast</h6>
+        </div>
+        <div class="column  m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/trending.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Trending</h6>
+        </div>
+        <div class="column  m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/luxe.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Luxe</h6>
+        </div>
+        <div class="column  m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/mansions.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Mansions</h6>
+        </div>
+        <div class="column  m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/golfing.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Golfing</h6>
+        </div>
+        <div class="column  m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/cabins.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Cabins</h6>
+        </div>
+        <div class="column  m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/containers.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Containers</h6>
+        </div>
+        <div class="column  m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/iconic-cities.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Iconic cities</h6>
+        </div>
+        <div class="column  m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/off-grid.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Off-the-grid</h6>
+        </div>
+        <div class="column  m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/tropical.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Tropical</h6>
+        </div>
+        <div class="column  m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/farms.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Farms</h6>
+        </div>
+        <div class="column  m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/caves.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Caves</h6>
+        </div>
+        <div class="column  m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/creative-spaces.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Creative spaces</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/a-frames.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">A-frames</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/camping.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Camping</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/lake.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Lake</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/treehouse.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Treehouses</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/houseboats.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Houseboats</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/lakefronts.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Lakefront</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/earth-homes.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Earth homes</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/ski.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Ski-in/out</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/grand-piano.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Grand pianos</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/vineyards.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Vineyards</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/cyclads.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Cycladic homes</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/castles.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Castles</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/new.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">New</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/barns.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Barns</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/adapted.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Adapted</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/play.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Play</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/historical-homes.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Historical homes</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/arctic.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Arctic</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/casas.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Casas particulars</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/shepherds-huts.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Shepherd's huts</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/trulli.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Trulli</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/chefs-kitchen.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Chef's kitchens</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/surfing.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Surfing</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/skiing.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Skiing</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/campers.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Campers</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/hanoks.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Hanoks</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/windmils.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Windmills</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/ryokans.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Ryokans</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/minsus.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Minsus</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/yurts.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Yurts</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/towers.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Towers</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/domes.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Domes</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/desert.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Desert</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/boats.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Boats</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/dammusi.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Dammusi</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/riads.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Riads</h6>
+        </div>
+        <div class="column m-3 mb-0 mt-0 pb-0 pt-0">
+          <div class="position align-items-center">
+            <img src="assets/beach.jpg" alt="" height="30px">
+          </div>
+          <h6 class="text-black">Beach</h6>
+        </div>
+       </div>
+      </div>
+    </div>
+    <div class=" container-fluid col-2">
+      <div class="pagination justify-content-end border border-secondary rounded-2 m-0 p-0">
+        <div class="col-6 pt-2 m-0">
+          <ul>
+            <li class="nav-item">
+              <a class="nav-link p-0 m-0" href="#"><img src="assets/filter-icon.png" alt="" height="20px" width="20px"></a>
+            </li>
+           </div>
+            <div class="col-6 p-0 m-0">
+              <li class="nav-item text-secondary">
+                <a class="nav-link active text-secondary pt-2 p-0 m-0 fs-6" aria-current="page" href="#">Filters</a>
+              </li>
+          </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</nav>
+
+<hr class="boder-tertiary">
+<!--body-->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col radius-20">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col radius-20">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col radius-20">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col radius-20">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col radius-20">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col radius-20">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col radius-20">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col radius-20">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col radius-20">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col radius-20">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col radius-20">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 18rem;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    <div class="col-3">
+      <div class="card" style="width: 100%;">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 7"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/diani-beach-kenya.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-2.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-3.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-5.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-6.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/diani-7.webp" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div class="card-body">
+          <h3>Diani Beach, Kenya</h3>
+          <p class="card-text">455 kilometers away</p>
+          <p class="card-text">Feb 26-Mar 4</p>
+          <h6>$180 night</h6>
+        </div>
+    </div>
+    </div>
+    
+  </div>
+</div>
+
+<!--make the other pages and make sure all links are linked to something.-->
+<!--make sure all images are different-->
+<!--if possible make a way to input and upload the images and data.-->
+<!--congratualtions it took youy only around four hours of non-stop coding to make your first website from scratch!-->
+<!--most buttons an hover have a shadow-->
+<!--add active states-->
+<!--gradually and continually improve on it-->
+<!--look for your next website to clone and add to your portfolio!-->
+
+</body>
+</html>
